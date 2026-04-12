@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+/*Fonts imprted are Doto, Oswald and Nunito*/
+
+body {
+    display : grid;
+
+    grid-template-rows: auto auto 1fr auto;
+    margin : 0;
+
+    background-image: linear-gradient(to bottom right, #05023d, #06001b);
+}
+
+nav {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+
+    width: 100%;
+    position: fixed;
+
+    padding : 1vw;
+    padding-left : 2vw;
+
+    background-color: rgba(0, 18, 35, 0.961);
+    font-size: 1.1rem;
+}
+.button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color:white;
+    transition: text-shadow 0.3s ease;
+}
+.button:hover {
+    color: rgb(6, 181, 208);
+    text-shadow: 0 0 3.5px rgba(255, 255, 255, 0.548);
+}
+.right_button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color:rgb(104, 250, 252);
+    margin-left: auto;
+    margin-right: 4.5vw;
+}
+.right_button:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3.5px rgba(104, 250, 252, 0.548);
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top : 3rem;
+    font-size: 3rem;
+
+    background-color: #06001bb1;
+    color : white;
+    border-bottom: rgba(255, 255, 255, 0.502) 1px solid;
+}
+.typewriter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.typewriter p {
+  font-family: 'Doto';
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 3s steps(21) forwards, blink 1s 3s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.head_container {
+    padding : 2rem;
+}
+.main_h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color : white;
+    font-family: 'Oswald';
+}
+.main_p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color : white;
+    font-family: 'Nunito';
+}
+.box {
+    
+    border-radius: 2%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #000000;
+}
+.interactive_grid {
+    display: grid;
+    grid-auto-columns: 20vw;
+    grid-auto-rows:15vw;
+    gap: 3rem;
+    justify-content: center;
+    grid-template-areas: 
+    "b1 b1 b4 b5"
+    "b2 b3 b4 b6"
+    "b7 b8 b8 b9"
+    "b7 b10 b10 b9";
+    margin : 2rem;
+}
+
+.ibutton1 {
+    font-family: 'Oswald';
+    text-decoration: none;
+    padding:10vh;
+    font-size: 3.5rem;
+
+    color:rgba(255, 255, 255, 0.523);
+    text-shadow: 0 0 3rem rgb(0, 0, 0);
+
+    transition: font-size 0.5s ease, text-shadow 0.5s ease;
+}
+.ibutton1:hover {
+    text-shadow: 0 0 10rem rgb(255, 255, 255);
+    font-size: 4rem;
+    color:white;
+}
+.box1 {
+    background-image: linear-gradient(to bottom right, #001391, #ff0505);
+}
+.box2 {
+    background-image: linear-gradient(to bottom right, #1f8500, #00dc63);
+}
+.box3 {
+    background-image: linear-gradient(to top right, #00ccff, #ff0505);
+}
+.box4 {
+    background-image: linear-gradient(to bottom right, #eeff01, #006d14);
+}
+.box5 {
+    background-image: linear-gradient(to bottom right, #bb0083, #000000);
+}
+.box6 {
+    background-image: linear-gradient(to bottom right, #515050, #b69c19);
+}
+.box7 {
+    background-image: linear-gradient(to bottom left, #195517, #4c4c4c);
+}
+.box8 {
+    background-image: linear-gradient(to bottom right, #244685, #db4e17);
+}
+.box9 {
+    background-image: linear-gradient(to top right, #800000, #121212);
+}
+.box10 {
+    background-image: linear-gradient(to bottom right, #ffee00, #ff0000);
+}
+
+
+
+
+footer {
+    border-top :  rgba(255, 255, 255, 0.502) 1px solid;
+    font-family: 'Nunito';
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color : white;
+    background-color: #06001bb1;
+}
