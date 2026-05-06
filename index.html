@@ -3,78 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Paavan Swaroop</title>
 </head>
 <body>
     <nav>
-        <a class = "button" href>About Me</a>
-        <a class = "button" href = "">Projects</a>
-        <a class = "button" href = "">Certificates</a>
-        <a class = "button" href = "">Other Stuff</a>
-        <a class="right_button" href = "">Contact Me</a>
+        <a class = "button" href="#Home">Home</a>
+        <a class = "button" href="#About_Me">About Me</a>
+        <a class = "button" href = "#Skills">Skills</a>
+        <a class = "button" href = "#Certificates">Certificates</a>
+        <a class = "button" href = "#Projects">Projects</a>
+        <a class="right_button" href = "#FooterId">Contact Me</a>
     </nav>
 
     <header>
-        <div class="typewriter">
-            <div>
-                <p>Hi this is Paavan</p>
+        <section id="Home">
+            <div class="typewriter">
+                <div>
+                    <p>Hi this is Paavan :)</p>
+                </div>
             </div>
-        </div>
+        </section>
     </header>
 
     <main>
-        <div class="head_container">
-            <h1 class = "main_h1">Aspiring Java Developer and Machine Learning Engineer</h1>
-            <p class = "main_p">I like learning new stuff, I have made a few games and I hate vibe-coding !</p>
-        </div>
+        <section id="About_Me">
+            <h1>About Me</h1>
+            <p>My name is <strong>Paavan</strong>, I am a CS undergrad at <strong>
+                <abbvr title = "Gandhi Institute Of Technology and Management">GITAM</abbvr>, Vizag</strong>. I am intrested in 
+            <strong>Web-Developement and Machine Learning</strong>. I have been actively learning about these technologies 
+            and have made projects releated to it. Along with these, I have also made some games by myself 
+            and I aspire to become a <strong>Java Stack Developer and Machine Learning Engineer</strong>.
+            </p>
+        </section>
 
-        <div class="interactive_grid">
-            <div class="box box1" style="grid-area: b1;">
-                <a class = "ibutton1" href = "">Java Projects</a>
-            </div>
+        <section id="Skills">
 
-            <div class="box box2" style="grid-area: b2;">
-                <a class = "ibutton1" href = "">Spring Boot</a>
-            </div>
+            <h1>Technical Skills</h1>
 
-            <div class="box box3" style="grid-area: b3;">
-                <a class = "ibutton1" href = "">JDBC</a>
-            </div>
+            <div class="interactive_grid">
+                <div class="box box1" style="grid-area: b1;">
+                    <a class = "ibutton ibutton1" >Core Java</a>
+                </div>
 
-            <div class="box box4" style="grid-area: b4;">
-                <a class = "ibutton1" href = "">Python Projects</a>
-            </div>
+                <div class="box box2" style="grid-area: b2;">
+                    <a class = "ibutton ibutton2" href = "https://github.com/pavswap/LearnSpringBoot" target="_blank">Spring Boot</a>
+                </div>
 
-            <div class="box box5" style="grid-area: b5;">
-                <a class = "ibutton1" href = "">My Collabs</a>
-            </div>
+                <div class="box box3" style="grid-area: b3;">
+                    <a class = "ibutton ibutton3" href = "https://github.com/pavswap/LearnJDBC" target="_blank">JDBC</a>
+                </div>
 
-            <div class="box box6" style="grid-area: b6;">
-                <a class = "ibutton1" href = "">Hibernate ORM</a>
-            </div>
+                <div class="box box4" style="grid-area: b4;">
+                    <a class = "ibutton ibutton4">Python</a>
+                </div>
 
-            <div class="box box7" style="grid-area: b7;">
-                <a class = "ibutton1" href = "">DSA</a>
-            </div>
+                <div class="box box5" style="grid-area: b5;">
+                    <a class = "ibutton ibutton5">Java Servelet</a>
+                </div>
 
-            <div class="box box8" style="grid-area: b8;">
-                <a class = "ibutton1" href = "">My Sql</a>
-            </div>
+                <div class="box box6" style="grid-area: b6;">
+                    <a class = "ibutton ibutton6" href = "https://github.com/pavswap/LearnHibernate" target="_blank">Hibernate ORM</a>
+                </div>
 
-            <div class="box box9" style="grid-area: b9;">
-                <a class = "ibutton1" href = "">LibGDX</a>
-            </div>
+                <div class="box box7" style="grid-area: b7;">
+                    <a class = "ibutton ibutton7" href = "https://github.com/pavswap/Data-Structures-and-Algorithms" target="_blank">DSA</a>
+                </div>
 
-            <div class="box box10" style="grid-area: b10;">
-                <a class = "ibutton1" href = "">HTML & CSS Projects</a>
+                <div class="box box8" style="grid-area: b8;">
+                    <a class = "ibutton ibutton8">My Sql</a>
+                </div>
+
+                <div class="box box9" style="grid-area: b9;">
+                    <a class = "ibutton ibutton9" href = "https://github.com/pavswap/LearnLibGDX" target="_blank">LibGDX</a>
+                </div>
+
+                <div class="box box10" style="grid-area: b10;">
+                    <a class = "ibutton ibutton10">JavaScript</a>
+                </div>
             </div>
-            
-        </div>
+        </section>
+
+
+        <section id="Certificates">
+            <h1>Certificates</h1>
+            <div class="interactive_cirtificates">
+                <div class="cbox"><a class="cbutton">Smart India Hackthon <i>- GITAM University</i> &nbsp;<strong>2025</strong></a></div>
+                <div class="cbox"><a class="cbutton">Shore Fest Vibe Coding Hackthon <i>- GITAM University</i> &nbsp;<strong>2026</strong></a></div>
+                <div class="cbox"><a class="cbutton">HackSprint <i>- Meta Developers Club, GITAM University</i> &nbsp;<strong>2026</strong></a></div>
+                <div class="cbox"><a class="cbutton">Introduction to Programming with HTML, CSS and JavaScript <i>- Duke University-Coursera</i> &nbsp;<strong>2024</strong></a></div>
+            </div>
+        </section>
+
+
+        <section id="Projects">
+
+            <h1>Projects</h1>
+
+            <div class="Project_interactive">
+                <div class="pbox pbox1" style="grid-area: p1;">
+                    <a class="pbutton java" href = "javaProjects.html">Java Projects</a>
+                </div>
+                <div class="pbox pbox2" style="grid-area: p2;">
+                    <a class="python pbutton" href = "pythonProjects.html">Python Projects</a>
+                </div>
+                <div class="pbox pbox3" style="grid-area: p3;">
+                    <a class="jscript pbutton" href = "frontendProjects.html">Frontend Projects</a>
+                </div>
+            </div
+
+        </section>
+
     </main>
 
-    <footer>
-        <h4>This Project was build by Paavan Swaroop, without the use of AI. Check out other projects by Paavan Swaroop.</h4>
-    </footer>
+    <section id="FooterId">
+        <footer>
+            <h4 class="footHead">This Project was build by Paavan Swaroop, without the use of AI. Check out other projects by Paavan Swaroop.</h4>
+                <div class="contacts">
+                    <a class="fbn lidin" href="https://www.linkedin.com/in/paavan-swaroop-330b13256/" target="_blank">LinkedIn</a>
+                    <a class="fbn githb" href="https://github.com/pavswap" target="_blank">GitHub</a>
+                    <a class="fbn copen" href="https://codepen.io/Paavan-Swaroop-2024010295" target="_blank">CodePen</a>
+                <a class="fbn ytube" href="https://www.youtube.com/channel/UCvLu4_TQdoL3w9bn6Eu8OrA" target="_blank">Youtube</a>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
