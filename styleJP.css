@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+/*Fonts imprted are Doto, Oswald and Nunito*/
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+}
+
+
+body {
+    display : grid;
+
+    grid-template-rows: auto 1fr auto;
+    margin : 0;
+
+    background-image: linear-gradient(to bottom right, #151515, #000000);
+    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%,   #111111 0%, #000000 90% );
+    background-attachment: fixed;
+}
+
+nav {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+    padding : 1vw;
+    padding-left : 2.5vw;
+
+    background-color: rgba(14, 14, 14, 0);
+    font-size: 1.1rem;
+    backdrop-filter: blur(40px);
+}
+.button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color:white;
+    transition: color 0.4s ease;
+}
+.button:hover {
+    color: #00ffa2;
+}
+.right_button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color: #00ffa2;
+    margin-left: auto;
+    margin-right: 4.5vw;
+    transition: color 0.4s ease;
+}
+.right_button:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+main {          
+    color:white;    
+    padding: 5rem;          
+    padding-top: 4rem;
+}
+main h1{
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+main p{
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+}
+.projCntnr {
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.contnr {
+    display: flex;
+    gap: 1rem;
+}
+.blackjack {
+    border : white 0.5rem solid;
+    border-image: linear-gradient(to bottom right, #005642 0%, #003423 100%) 1;
+    padding: 2rem;
+}
+.qrscanner {
+    border : white 0.5rem solid;
+    border-image: linear-gradient(to bottom right, #32005a 0%, #320034 100%) 1;
+    padding: 2rem;
+}
+.cliasci {
+    border : white 0.5rem solid;
+    border-image: linear-gradient(to bottom right, #272727 0%, #131313 100%) 1;
+    padding: 2rem;
+}
+Main a {
+    text-decoration: none;
+}
+Main a h3 {
+    font-family: 'Nunito';
+    color:white;
+    transition: color 0.4s ease;
+}
+Main a h3:hover {
+    color: #00ffa2;
+}
+@media all and (max-width : 1300px) {
+    .contnr {
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+
+
+footer {
+    border-top :  rgba(255, 255, 255, 0.502) 1px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: #1717177e;
+    font-size: 1.3rem;
+    padding:1rem 2.5rem  2.5rem  2.5rem;
+
+}
+
+.footHead {
+    font-family: 'Nunito';
+    color : white;
+}
+
+.contacts a{
+    font-family: 'Nunito';
+    text-decoration: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.lidin {
+    color:rgb(67, 94, 229);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.lidin:hover {
+    color:rgb(72, 175, 243);
+    text-shadow: 0 0 0.5rem rgba(166, 128, 255, 0.486); 
+}
+.githb {
+    color:rgb(130, 44, 227);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.githb:hover {
+    color:rgb(172, 101, 230);
+    text-shadow: 0 0 1rem rgba(218, 109, 255, 0.5);
+}
+.copen {
+    color:rgb(22, 142, 24);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.copen:hover {
+    color:rgb(84, 209, 68);
+    text-shadow: 0 0 1rem rgba(113, 255, 118, 0.532);
+}
+.ytube {
+    color:rgb(183, 23, 23);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.ytube:hover {
+    color:rgb(255, 60, 0);
+    text-shadow: 0 0 1rem rgba(255, 116, 116, 0.546);
+}

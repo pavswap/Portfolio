@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+/*Fonts imprted are Doto, Oswald and Nunito*/
+
+html { scroll-behavior: smooth; }
+
+body {
+    display : grid;
+
+    grid-template-rows: auto auto 1fr auto;
+    margin : 0;
+
+    background-image: linear-gradient(to bottom right, #151515, #000000);
+    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%,   #111111 0%, #000000 90% );
+    background-attachment: fixed;
+}
+
+nav {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+
+    width: 100%;
+    position: fixed;
+
+    padding : 1vw;
+    padding-left : 2.5vw;
+
+    background-color: rgba(14, 14, 14, 0);
+    font-size: 1.1rem;
+    backdrop-filter: blur(40px);
+}
+.button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color:white;
+    transition: color 0.4s ease;
+}
+.button:hover {
+    color: #00ffa2;
+}
+.right_button {
+    font-family: 'Nunito';
+    text-decoration: none;
+    color: #00ffa2;
+    margin-left: auto;
+    margin-right: 4.5vw;
+    transition: color 0.4s ease;
+}
+.right_button:hover {
+    color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top : 0rem;
+    font-size: 5rem;
+
+    background-color: #0000007d;
+    color : white;
+    border-bottom: rgba(255, 255, 255, 0.502) 1px solid;
+}
+@media all and (max-width : 1000px) {
+    header {
+        font-size : 3rem;
+    }
+}
+@media all and (max-width : 400px) {
+    header {
+        padding-top: 2rem;
+        font-size : 2rem;
+    }
+}
+.typewriter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.typewriter p {
+  font-family: 'Doto';
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 3s steps(21) forwards, blink 1s 3s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* Main */
+
+/* Section : About Me */
+#About_Me {
+    color:white;
+    margin : 5rem;
+    margin-top:4rem;
+    padding-top: 1rem;
+}
+#About_Me h1{
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+#About_Me p{
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+}
+
+/* Section : Projects */
+#Skills {
+    padding-top: 1rem;
+    margin-top:5rem;
+}
+#Skills h1 {
+    font-family: 'Oswald';
+    font-size: 3rem;
+    color : white;
+    margin-left:5rem;
+}
+.box {
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem #000000d1;
+    border : white 0.5rem solid;
+}
+
+.interactive_grid {
+    display: grid;
+    grid-auto-columns: 20vw;
+    grid-auto-rows:15vw;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-areas: 
+    "b1 b1 b4 b5"
+    "b2 b3 b4 b6"
+    "b7 b8 b8 b9"
+    "b7 b10 b10 b9";
+    margin : 2rem;
+}
+.ibutton {
+    font-family: 'Oswald';
+    text-decoration: none;
+    padding:10vh;
+    font-size: 3.5rem;
+
+
+    color:rgba(255, 255, 255, 0.523);
+    text-shadow: 0 0 3rem rgb(0, 0, 0);
+
+    transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.ibutton:hover {
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.432);
+    font-size: 3.75rem;
+    color:white;
+}
+
+@media all and (max-width : 1300px) {
+    .ibutton {
+        font-size: 2rem;
+    }
+    .ibutton:hover {
+        font-size: 2.25rem;
+    }
+}
+@media all and (max-width : 700px) {
+    .interactive_grid {
+        display: grid;
+        grid-auto-columns: 40vw;
+        grid-auto-rows:20vw;
+        gap: 0.5rem;
+        justify-content: center;
+        grid-template-areas: 
+        "b1 b1"
+        "b2 b2"
+        "b3 b3"
+        "b4 b4"
+        "b5 b5"
+        "b6 b6"
+        "b7 b7"
+        "b8 b8"
+        "b9 b9"
+        "b10 b10";
+        margin : 2rem;
+    }
+    .ibutton {
+        font-size: 1.5rem;
+    }
+    .ibutton:hover {
+        font-size: 1.5rem;
+    }
+}
+.box1 {
+    border-image: linear-gradient(to bottom right, #001391 0%, #ff0505 100%) 1;
+}
+.box2 {
+    border-image: linear-gradient(to bottom right, #1f8500, #00dc63) 1;
+}
+.box3 {
+    border-image: linear-gradient(to top right, #00ccff, #ff0505) 1;
+}
+.box4 {
+    border-image: linear-gradient(to bottom right, #47edff, #fbff00) 1;
+}
+.box5 {
+    border-image: linear-gradient(to bottom right, #bb0083, #ff00e6) 1;
+}
+.box6 {
+    border-image: linear-gradient(to bottom right, #515050, #b69c19) 1;
+}
+.box7 {
+    border-image: linear-gradient(to bottom left, #195517, #00ffa2) 1;
+}
+.box8 {
+    border-image: linear-gradient(to bottom right, #244685, #db4e17) 1;
+}
+.box9 {
+    border-image: linear-gradient(to top right, #800000, #ff7f16) 1;
+}
+.box10 {
+    border-image: linear-gradient(to bottom right, #ffee00, #ff0000) 1;
+}
+
+#Certificates {
+    color:white;
+    margin : 5rem;
+    margin-top:4rem;
+    padding-top: 1rem;
+}
+#Certificates h1{
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+#Certificates p{
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+}
+@media all and (max-width : 1000px) {
+    #Certificates h1{
+        font-size: 3rem;
+    }
+    #Certificates p{
+        font-size: 0.5rem;
+    }
+}
+
+#Projects {
+    color:white;
+    margin : 5rem;
+    margin-top:4rem;
+    padding-top: 1rem;
+}
+#Projects h1{
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+.cbox {
+    margin-bottom: 2rem;
+    border-left: 0.5rem #00ffa2 solid;
+}
+.cbutton{
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+    padding:1rem;
+}
+
+.pbox {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem #000000d1;
+    border : white 0.5rem solid;
+} 
+.Project_interactive {
+    display: grid;
+    grid-auto-columns: 18vw;
+    grid-auto-rows:15vw;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-areas: 
+    "p1 p1 p2 p2"
+    "p3 p3 p3 p3";
+    margin : 2rem;
+}
+.pbutton {
+    font-family: 'Oswald';
+    text-decoration: none;
+    padding:10vh;
+    font-size: 3.5rem;
+
+    color:rgba(255, 255, 255, 0.523);
+    text-shadow: 0 0 3rem rgb(0, 0, 0);
+
+    transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.pbutton:hover {
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.432);
+    font-size: 3.75rem;
+    color:white;
+}
+@media all and (max-width : 1300px) {
+    .pbutton {
+        font-size: 2rem;
+    }
+    .pbutton:hover {
+        font-size: 2.25rem;
+    }
+    
+}
+@media all and (max-width : 700px) {
+    .Project_interactive {
+        display: grid;
+        grid-auto-columns: 40vw;
+        grid-auto-rows:20vw;
+        gap: 0.5rem;
+        justify-content: center;
+        grid-template-areas: 
+        "p1 p1"
+        "p2 p2"
+        "p3 p3";
+        margin : 2rem;
+    }
+    .pbutton {
+        font-size: 1.5rem;
+    }
+    .pbutton:hover {
+        font-size: 1.5rem;
+    }
+}
+
+
+.pbox1 {
+    border-image: linear-gradient(to bottom right, #001391 0%, #ff0505 100%) 1;
+}
+.pbox2 {
+    border-image: linear-gradient(to bottom right, #47edffd6, #fbff00e8) 1;
+}
+.pbox3 {
+    border-image: linear-gradient(to bottom right, #ffee00, #ff0000) 1;
+}
+
+footer {
+    border-top :  rgba(255, 255, 255, 0.502) 1px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: #1717177e;
+    font-size: 1.3rem;
+    padding:1rem 2.5rem  2.5rem  2.5rem;
+
+}
+
+.footHead {
+    font-family: 'Nunito';
+    color : white;
+}
+
+.contacts a{
+    font-family: 'Nunito';
+    text-decoration: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.lidin {
+    color:rgb(67, 94, 229);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.lidin:hover {
+    color:rgb(72, 175, 243);
+    text-shadow: 0 0 0.5rem rgba(166, 128, 255, 0.486); 
+}
+.githb {
+    color:rgb(130, 44, 227);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.githb:hover {
+    color:rgb(172, 101, 230);
+    text-shadow: 0 0 1rem rgba(218, 109, 255, 0.5);
+}
+.copen {
+    color:rgb(22, 142, 24);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.copen:hover {
+    color:rgb(84, 209, 68);
+    text-shadow: 0 0 1rem rgba(113, 255, 118, 0.532);
+}
+.ytube {
+    color:rgb(183, 23, 23);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.ytube:hover {
+    color:rgb(255, 60, 0);
+    text-shadow: 0 0 1rem rgba(255, 116, 116, 0.546);
+}
+
+html {
+  scrollbar-width: thin;
+}
