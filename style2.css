@@ -146,6 +146,7 @@ header {
     grid-auto-rows:15vw;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
     grid-template-areas: 
     "b1 b1 b4 b5"
     "b2 b3 b4 b6"
@@ -156,7 +157,7 @@ header {
 .ibutton {
     font-family: 'Oswald';
     text-decoration: none;
-    padding:10vh;
+    padding:2vh;
     font-size: 3.5rem;
 
 
