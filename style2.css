@@ -1,419 +1,347 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
-/*Fonts imprted are Doto, Oswald and Nunito*/
+/* Fonts: Doto, Oswald, Nunito */
 
-html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
 
-body {
-    display : grid;
-
-    grid-template-rows: auto auto 1fr auto;
-    margin : 0;
-
-    background-image: linear-gradient(to bottom right, #151515, #000000);
-    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%,   #111111 0%, #000000 90% );
-    background-attachment: fixed;
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    margin: 0;
+    background-color: rgb(7, 7, 7);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ---------- NAV ---------- */
 nav {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 2vw;
-
     width: 100%;
     position: fixed;
-
-    padding : 1vw;
-    padding-left : 2.5vw;
-
-    background-color: rgba(14, 14, 14, 0);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1rem 2.5vw;
+    background-color: #000000;
     font-size: 1.1rem;
-    backdrop-filter: blur(40px);
 }
 .button {
     font-family: 'Nunito';
     text-decoration: none;
-    color:white;
+    color: white;
     transition: color 0.4s ease;
 }
-.button:hover {
-    color: #00ffa2;
-}
+.button:hover { color: #00ffa2; }
+
 .right_button {
     font-family: 'Nunito';
     text-decoration: none;
     color: #00ffa2;
     margin-left: auto;
-    margin-right: 4.5vw;
+    margin-right: 2vw;
     transition: color 0.4s ease;
 }
-.right_button:hover {
-    color: rgb(255, 255, 255);
-}
+.right_button:hover { color: rgb(255, 255, 255); }
 
+/* ---------- HEADER ---------- */
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding-top : 0rem;
-    font-size: 5rem;
-
-    background-color: #0000007d;
-    color : white;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-family: 'Doto';
+    background-color: #000000;
+    color: white;
     border-bottom: rgba(255, 255, 255, 0.502) 1px solid;
-}
-@media all and (max-width : 1000px) {
-    header {
-        font-size : 3rem;
-    }
-}
-@media all and (max-width : 400px) {
-    header {
-        padding-top: 2rem;
-        font-size : 2rem;
-    }
-}
-.typewriter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.typewriter p {
-  font-family: 'Doto';
-  margin-inline: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 1px solid;
-  animation: typing 3s steps(21) forwards, blink 1s 3s step-end infinite;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+    padding: 6rem 1rem 3rem;
+    text-align: center;
+    word-break: break-word;
 }
 
-
-/* Main */
-
-/* Section : About Me */
+/* ---------- ABOUT ---------- */
 #About_Me {
-    color:white;
-    margin : 5rem;
-    margin-top:4rem;
+    color: white;
+    margin: 4rem 5rem 5rem;
     padding-top: 1rem;
 }
-#About_Me h1{
+#About_Me h1 {
     font-family: 'Oswald';
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
-#About_Me p{
+#About_Me p {
     font-family: 'Nunito';
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
 }
 
-/* Section : Projects */
+/* ---------- SKILLS ---------- */
 #Skills {
     padding-top: 1rem;
-    margin-top:5rem;
+    margin-top: 5rem;
 }
 #Skills h1 {
     font-family: 'Oswald';
-    font-size: 3rem;
-    color : white;
-    margin-left:5rem;
-}
-.box {
-    
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0.5rem #000000d1;
-    border : white 0.5rem solid;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    margin-left: 5rem;
 }
 
 .interactive_grid {
     display: grid;
-    grid-auto-columns: 20vw;
-    grid-auto-rows:15vw;
+    grid-auto-columns: minmax(0, 18vw);
+    grid-auto-rows: 13.5vw;
     gap: 1rem;
     justify-content: center;
-    grid-template-areas: 
-    "b1 b1 b4 b5"
-    "b2 b3 b4 b6"
-    "b7 b8 b8 b9"
-    "b7 b10 b10 b9";
-    margin : 2rem;
+    grid-template-areas:
+        "b1 b1 b4 b5"
+        "b2 b2 b4 b8"
+        "b3 b6 b6 b9"
+        "b3 b10 b10 b9";
+    margin: 2rem;
 }
+
 .ibutton {
     font-family: 'Oswald';
     text-decoration: none;
-    padding:3vh;
-    font-size: 3.5rem;
+    font-size: clamp(1.2rem, 3vw, 3.5rem);
+    color: rgba(255, 255, 255, 0.523);
+    text-shadow: 0 0 0.5rem rgb(0, 0, 0);
+    transition: color 0.3s ease, text-shadow 0.1s ease, font-size 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.5rem #000000d1;
+    border: white 0.3rem solid;
+}
+.ibutton:hover { color: white; }
 
+.ibutton1 { border-image: linear-gradient(to bottom right, rgb(0,20,151) 0%, rgb(255,5,5) 100%) 1; }
+.ibutton1:hover { text-shadow: 0 0 1rem rgb(185,0,0); background-image: linear-gradient(to bottom right, rgba(0,20,151,0.068) 0%, rgba(255,5,5,0.073) 100%); }
+.ibutton2 { border-image: linear-gradient(to bottom right, rgb(31,133,0), rgb(0,220,99)) 1; }
+.ibutton2:hover { text-shadow: 0 0 1rem rgb(0,220,99); background-image: linear-gradient(to bottom right, rgba(31,133,0,0.068), rgba(0,220,99,0.073)); }
+.ibutton3 { border-image: linear-gradient(to top right, rgb(0,204,255), rgb(255,5,5)) 1; }
+.ibutton3:hover { text-shadow: 0 0 1rem rgb(0,204,255); background-image: linear-gradient(to top right, rgba(0,204,255,0.068), rgba(255,5,5,0.073)); }
+.ibutton4 { border-image: linear-gradient(to bottom right, rgb(71,237,255), rgb(251,255,0)) 1; }
+.ibutton4:hover { text-shadow: 0 0 1rem rgb(71,237,255); background-image: linear-gradient(to bottom right, rgba(71,237,255,0.068), rgba(251,255,0,0.073)); }
+.ibutton5 { border-image: linear-gradient(to bottom right, rgb(0,7,105), rgb(61,132,255)) 1; }
+.ibutton5:hover { text-shadow: 0 0 1rem rgb(61,132,255); background-image: linear-gradient(to bottom right, rgba(0,7,105,0.068), rgba(61,132,255,0.073)); }
+.ibutton6 { border-image: linear-gradient(to bottom right, rgb(81,80,80), rgb(182,156,25)) 1; }
+.ibutton6:hover { text-shadow: 0 0 1rem rgb(182,156,25); background-image: linear-gradient(to bottom right, rgba(81,80,80,0.068), rgba(182,156,25,0.073)); }
+.ibutton7 { border-image: linear-gradient(to bottom left, rgb(25,85,23), rgb(0,255,162)) 1; }
+.ibutton7:hover { text-shadow: 0 0 1rem rgb(0,255,162); background-image: linear-gradient(to bottom left, rgba(25,85,23,0.068), rgba(0,255,162,0.073)); }
+.ibutton8 { border-image: linear-gradient(to bottom right, rgb(36,70,133), rgb(219,78,23)) 1; }
+.ibutton8:hover { text-shadow: 0 0 1rem rgb(219,78,23); background-image: linear-gradient(to bottom right, rgba(36,70,133,0.068), rgba(219,78,23,0.073)); }
+.ibutton9 { border-image: linear-gradient(to top right, rgb(128,0,0), rgb(255,127,22)) 1; }
+.ibutton9:hover { text-shadow: 0 0 1rem rgb(255,127,22); background-image: linear-gradient(to top right, rgba(128,0,0,0.068), rgba(255,127,22,0.073)); }
+.ibutton10 { border-image: linear-gradient(to bottom right, rgb(255,238,0), rgb(255,0,0)) 1; }
+.ibutton10:hover { text-shadow: 0 0 1rem rgb(255,238,0); background-image: linear-gradient(to bottom right, rgba(255,238,0,0.068), rgba(255,0,0,0.073)); }
 
-    color:rgba(255, 255, 255, 0.523);
-    text-shadow: 0 0 3rem rgb(0, 0, 0);
-
-    transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-}
-.ibutton:hover {
-    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.432);
-    font-size: 3.75rem;
-    color:white;
-}
-
-@media all and (max-width : 1300px) {
-    .ibutton {
-        font-size: 2rem;
-    }
-    .ibutton:hover {
-        font-size: 2.25rem;
-    }
-}
-@media all and (max-width : 700px) {
-    .interactive_grid {
-        display: grid;
-        grid-auto-columns: 40vw;
-        grid-auto-rows:20vw;
-        gap: 0.5rem;
-        justify-content: center;
-        grid-template-areas: 
-        "b1 b1"
-        "b2 b2"
-        "b3 b3"
-        "b4 b4"
-        "b5 b5"
-        "b6 b6"
-        "b7 b7"
-        "b8 b8"
-        "b9 b9"
-        "b10 b10";
-        margin : 2rem;
-    }
-    .ibutton {
-        font-size: 1.5rem;
-    }
-    .ibutton:hover {
-        font-size: 1.5rem;
-    }
-}
-.box1 {
-    border-image: linear-gradient(to bottom right, #001391 0%, #ff0505 100%) 1;
-}
-.box2 {
-    border-image: linear-gradient(to bottom right, #1f8500, #00dc63) 1;
-}
-.box3 {
-    border-image: linear-gradient(to top right, #00ccff, #ff0505) 1;
-}
-.box4 {
-    border-image: linear-gradient(to bottom right, #47edff, #fbff00) 1;
-}
-.box5 {
-    border-image: linear-gradient(to bottom right, #bb0083, #ff00e6) 1;
-}
-.box6 {
-    border-image: linear-gradient(to bottom right, #515050, #b69c19) 1;
-}
-.box7 {
-    border-image: linear-gradient(to bottom left, #195517, #00ffa2) 1;
-}
-.box8 {
-    border-image: linear-gradient(to bottom right, #244685, #db4e17) 1;
-}
-.box9 {
-    border-image: linear-gradient(to top right, #800000, #ff7f16) 1;
-}
-.box10 {
-    border-image: linear-gradient(to bottom right, #ffee00, #ff0000) 1;
-}
-
+/* ---------- CERTIFICATES ---------- */
 #Certificates {
-    color:white;
-    margin : 5rem;
-    margin-top:4rem;
+    color: white;
+    margin: 4rem 5rem 5rem;
     padding-top: 1rem;
 }
-#Certificates h1{
+#Certificates h1 {
     font-family: 'Oswald';
-    font-size: 3rem;
-}
-#Certificates p{
-    font-family: 'Nunito';
-    font-size: 1.2rem;
-}
-@media all and (max-width : 1000px) {
-    #Certificates h1{
-        font-size: 3rem;
-    }
-    #Certificates p{
-        font-size: 0.5rem;
-    }
-}
-
-#Projects {
-    color:white;
-    margin : 5rem;
-    margin-top:4rem;
-    padding-top: 1rem;
-}
-#Projects h1{
-    font-family: 'Oswald';
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 .cbox {
     margin-bottom: 2rem;
     border-left: 0.5rem #00ffa2 solid;
 }
-.cbutton{
+.cbutton {
     font-family: 'Nunito';
-    font-size: 1.2rem;
-    padding:1rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+    padding: 1rem;
+    display: block;
+    word-break: break-word;
 }
 
-.pbox {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0.5rem #000000d1;
-    border : white 0.5rem solid;
-} 
+/* ---------- PROJECTS ---------- */
+#Projects {
+    color: white;
+    margin: 4rem 5rem 5rem;
+    padding-top: 1rem;
+}
+#Projects h1 {
+    font-family: 'Oswald';
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
 .Project_interactive {
     display: grid;
-    grid-auto-columns: 18vw;
-    grid-auto-rows:15vw;
+    grid-auto-columns: minmax(0, 12vw);
+    grid-auto-rows: 12vw;
     gap: 1rem;
-    justify-content: center;
-    grid-template-areas: 
-    "p1 p1 p2 p2"
-    "p3 p3 p3 p3";
-    margin : 2rem;
+    grid-template-areas:
+        "p1 p1 p1 e1 e1"
+        "p2 p2 p2 p2 e2"
+        "p3 p3 p3 p3 p3";
+    margin: 2rem;
 }
+
 .pbutton {
     font-family: 'Oswald';
     text-decoration: none;
-    padding:10vh;
-    font-size: 3.5rem;
+    font-size: clamp(1.2rem, 3vw, 3.5rem);
+    color: rgba(255, 255, 255, 0.523);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.5rem #000000d1;
+    border: white 0.3rem solid;
+}
+.pbutton:hover { color: white; }
 
-    color:rgba(255, 255, 255, 0.523);
-    text-shadow: 0 0 3rem rgb(0, 0, 0);
+.pbutton1 { border-image: linear-gradient(to bottom right, rgb(0,19,145), rgb(255,5,5)) 1; }
+.pbutton1:hover { text-shadow: 0 0 1rem rgb(255,5,5); background-image: linear-gradient(to bottom right, rgba(0,19,145,0.068), rgba(255,5,5,0.073)); }
+.pbutton2 { border-image: linear-gradient(to bottom right, rgb(71,237,255), rgb(251,255,0)) 1; }
+.pbutton2:hover { text-shadow: 0 0 1rem rgb(71,237,255); background-image: linear-gradient(to bottom right, rgba(71,237,255,0.068), rgba(251,255,0,0.073)); }
+.pbutton3 { border-image: linear-gradient(to bottom right, rgb(255,238,0), rgb(255,0,0)) 1; }
+.pbutton3:hover { text-shadow: 0 0 1rem rgb(255,238,0); background-image: linear-gradient(to bottom right, rgba(255,238,0,0.068), rgba(255,0,0,0.073)); }
 
-    transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-}
-.pbutton:hover {
-    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.432);
-    font-size: 3.75rem;
-    color:white;
-}
-@media all and (max-width : 1300px) {
-    .pbutton {
-        font-size: 2rem;
-    }
-    .pbutton:hover {
-        font-size: 2.25rem;
-    }
-    
-}
-@media all and (max-width : 700px) {
-    .Project_interactive {
-        display: grid;
-        grid-auto-columns: 40vw;
-        grid-auto-rows:20vw;
-        gap: 0.5rem;
-        justify-content: center;
-        grid-template-areas: 
-        "p1 p1"
-        "p2 p2"
-        "p3 p3";
-        margin : 2rem;
-    }
-    .pbutton {
-        font-size: 1.5rem;
-    }
-    .pbutton:hover {
-        font-size: 1.5rem;
-    }
-}
-
-
-.pbox1 {
-    border-image: linear-gradient(to bottom right, #001391 0%, #ff0505 100%) 1;
-}
-.pbox2 {
-    border-image: linear-gradient(to bottom right, #47edffd6, #fbff00e8) 1;
-}
-.pbox3 {
-    border-image: linear-gradient(to bottom right, #ffee00, #ff0000) 1;
-}
-
+/* ---------- FOOTER ---------- */
 footer {
-    border-top :  rgba(255, 255, 255, 0.502) 1px solid;
-
+    border-top: rgba(255, 255, 255, 0.502) 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-
-    background-color: #1717177e;
+    background-color: #000000;
     font-size: 1.3rem;
-    padding:1rem 2.5rem  2.5rem  2.5rem;
-
+    padding: 1rem 2.5rem 2.5rem;
+    text-align: center;
 }
-
 .footHead {
     font-family: 'Nunito';
-    color : white;
+    color: white;
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
 }
-
-.contacts a{
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0;
+}
+.contacts a {
     font-family: 'Nunito';
     text-decoration: none;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.4rem 1.5rem;
+    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
 }
-.lidin {
-    color:rgb(67, 94, 229);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.lidin:hover {
-    color:rgb(72, 175, 243);
-    text-shadow: 0 0 0.5rem rgba(166, 128, 255, 0.486); 
-}
-.githb {
-    color:rgb(130, 44, 227);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.githb:hover {
-    color:rgb(172, 101, 230);
-    text-shadow: 0 0 1rem rgba(218, 109, 255, 0.5);
-}
-.copen {
-    color:rgb(22, 142, 24);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.copen:hover {
-    color:rgb(84, 209, 68);
-    text-shadow: 0 0 1rem rgba(113, 255, 118, 0.532);
-}
-.ytube {
-    color:rgb(183, 23, 23);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.ytube:hover {
-    color:rgb(255, 60, 0);
-    text-shadow: 0 0 1rem rgba(255, 116, 116, 0.546);
+.lidin { color: rgb(67,94,229); transition: color 0.3s ease, text-shadow 0.3s ease; }
+.lidin:hover { color: rgb(72,175,243); text-shadow: 0 0 0.5rem rgba(166,128,255,0.486); }
+.githb { color: rgb(130,44,227); transition: color 0.3s ease, text-shadow 0.3s ease; }
+.githb:hover { color: rgb(172,101,230); text-shadow: 0 0 1rem rgba(218,109,255,0.5); }
+.copen { color: rgb(22,142,24); transition: color 0.3s ease, text-shadow 0.3s ease; }
+.copen:hover { color: rgb(84,209,68); text-shadow: 0 0 1rem rgba(113,255,118,0.532); }
+.lcode { color: rgb(132,142,22); transition: color 0.3s ease, text-shadow 0.3s ease; }
+.lcode:hover { color: rgb(209,197,68); text-shadow: 0 0 1rem rgba(238,255,113,0.532); }
+.ytube { color: rgb(183,23,23); transition: color 0.3s ease, text-shadow 0.3s ease; }
+.ytube:hover { color: rgb(255,60,0); text-shadow: 0 0 1rem rgba(255,116,116,0.546); }
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Tablet: <= 1024px */
+@media (max-width: 1024px) {
+    nav { font-size: 1rem; gap: 1.5vw; }
+    #About_Me, #Certificates, #Projects { margin: 3rem 2.5rem 4rem; }
+    #Skills h1 { margin-left: 2.5rem; }
+
+    .interactive_grid {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 18vw;
+        grid-template-areas:
+            "b1 b1 b4"
+            "b2 b2 b4"
+            "b3 b6 b6"
+            "b3 b10 b10"
+            "b5 b8 b9";
+    }
+    .Project_interactive {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 18vw;
+        grid-template-areas:
+            "p1 p1 p1"
+            "p2 p2 p2"
+            "p3 p3 p3";
+    }
+    .empt1, .empt2 { display: none; }
 }
 
-html {
-  scrollbar-width: thin;
+/* Mobile: <= 640px */
+@media (max-width: 640px) {
+    nav {
+        gap: 0.75rem 1rem;
+        padding: 0.75rem 1rem;
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+    .right_button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header { padding: 5rem 1rem 2.5rem; }
+
+    #About_Me, #Certificates, #Projects {
+        margin: 2.5rem 1.25rem 3rem;
+    }
+    #Skills { margin-top: 3rem; }
+    #Skills h1 { margin-left: 1.25rem; }
+
+    .interactive_grid {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: minmax(110px, 28vw);
+        grid-template-areas:
+            "b1  b1"
+            "b2  b2"
+            "b3  b4"
+            "b5  b6"
+            "b8  b9"
+            "b10 b10";
+        margin: 1.25rem;
+        gap: 0.75rem;
+    }
+
+    .Project_interactive {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: minmax(120px, 30vw);
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3";
+        margin: 1.25rem;
+    }
+
+    .ibutton, .pbutton {
+        font-size: clamp(1.1rem, 5.5vw, 2rem);
+        border-width: 0.2rem;
+    }
+
+    .cbutton { font-size: 1rem; padding: 0.75rem; }
+
+    .contacts a { padding: 0.4rem 0.9rem; }
+}
+
+/* Very small: <= 380px */
+@media (max-width: 380px) {
+    nav { font-size: 0.85rem; gap: 0.5rem 0.75rem; }
+    .ibutton, .pbutton { font-size: 1rem; }
 }
