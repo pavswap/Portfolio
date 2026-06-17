@@ -38,17 +38,17 @@ nav {
     color: white;
     transition: color 0.4s ease;
 }
-.button:hover { color: #00ffa2; }
+.button:hover { color: #adadad; }
 
 .right_button {
     font-family: 'Nunito';
     text-decoration: none;
-    color: #00ffa2;
+    color: #ffffff;
     margin-left: auto;
     margin-right: 2vw;
     transition: color 0.4s ease;
 }
-.right_button:hover { color: rgb(255, 255, 255); }
+.right_button:hover { color: #adadad; }
 
 /* ---------- HEADER ---------- */
 header {
@@ -59,7 +59,7 @@ header {
     font-family: 'Doto';
     background-color: #000000;
     color: white;
-    border-bottom: rgba(255, 255, 255, 0.502) 1px solid;
+    border-bottom: rgba(255, 255, 255, 0.200) 0.5px solid;
     padding: 6rem 1rem 3rem;
     text-align: center;
     word-break: break-word;
@@ -157,7 +157,7 @@ header {
 }
 .cbox {
     margin-bottom: 2rem;
-    border-left: 0.5rem #00ffa2 solid;
+    border-left: 0.05rem #ffffff solid;
 }
 .cbutton {
     font-family: 'Nunito';
@@ -215,7 +215,7 @@ header {
 
 /* ---------- FOOTER ---------- */
 footer {
-    border-top: rgba(255, 255, 255, 0.502) 1px solid;
+    border-top: rgba(255, 255, 255, 0.200) 0.5px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,7 +298,10 @@ footer {
         margin-right: 0;
     }
 
-    header { padding: 5rem 1rem 2.5rem; }
+    header { 
+        font-size: clamp(1.6rem, 5vw, 3rem); 
+        padding: 5rem 1rem 2.5rem; 
+    }
 
     #About_Me, #Certificates, #Projects {
         margin: 2.5rem 1.25rem 3rem;
@@ -342,6 +345,12 @@ footer {
 
 /* Very small: <= 380px */
 @media (max-width: 380px) {
+
+    header { 
+        font-size: clamp(1.5rem, 4vw, 1rem); 
+        padding: 5rem 1rem 2.5rem; 
+    }
+
     nav { font-size: 0.85rem; gap: 0.5rem 0.75rem; }
     .ibutton, .pbutton { font-size: 1rem; }
 }
