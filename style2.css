@@ -113,7 +113,7 @@ header {
     font-size: clamp(1.2rem, 3vw, 3.5rem);
     color: rgba(255, 255, 255, 0.523);
     text-shadow: 0 0 0.5rem rgb(0, 0, 0);
-    transition: color 0.3s ease, text-shadow 0.1s ease, font-size 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease, font-size 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +125,7 @@ header {
 .ibutton:hover { color: white; }
 
 .ibutton1 { border-image: linear-gradient(to bottom right, rgb(0,20,151) 0%, rgb(255,5,5) 100%) 1; }
-.ibutton1:hover { text-shadow: 0 0 1rem rgb(185,0,0); background-image: linear-gradient(to bottom right, rgba(0,20,151,0.068) 0%, rgba(255,5,5,0.073) 100%); }
+.ibutton1:hover { text-shadow: 0 0 1rem rgb(185,0,0); background-image: linear-gradient(to bottom right, rgba(0, 20, 151, 0.153) 0%, rgba(255, 5, 5, 0.107) 100%); }
 .ibutton2 { border-image: linear-gradient(to bottom right, rgb(31,133,0), rgb(0,220,99)) 1; }
 .ibutton2:hover { text-shadow: 0 0 1rem rgb(0,220,99); background-image: linear-gradient(to bottom right, rgba(31,133,0,0.068), rgba(0,220,99,0.073)); }
 .ibutton3 { border-image: linear-gradient(to top right, rgb(0,204,255), rgb(255,5,5)) 1; }
@@ -207,7 +207,7 @@ header {
 .pbutton:hover { color: white; }
 
 .pbutton1 { border-image: linear-gradient(to bottom right, rgb(0,19,145), rgb(255,5,5)) 1; }
-.pbutton1:hover { text-shadow: 0 0 1rem rgb(255,5,5); background-image: linear-gradient(to bottom right, rgba(0,19,145,0.068), rgba(255,5,5,0.073)); }
+.pbutton1:hover { text-shadow: 0 0 1rem rgb(255,5,5); background-image: linear-gradient(to bottom right, rgba(0, 20, 151, 0.153) 0%, rgba(255, 5, 5, 0.107) 100%); }
 .pbutton2 { border-image: linear-gradient(to bottom right, rgb(71,237,255), rgb(251,255,0)) 1; }
 .pbutton2:hover { text-shadow: 0 0 1rem rgb(71,237,255); background-image: linear-gradient(to bottom right, rgba(71,237,255,0.068), rgba(251,255,0,0.073)); }
 .pbutton3 { border-image: linear-gradient(to bottom right, rgb(255,238,0), rgb(255,0,0)) 1; }
