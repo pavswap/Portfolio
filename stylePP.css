@@ -1,174 +1,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
-/*Fonts imprted are Doto, Oswald and Nunito*/
+/* Fonts: Doto, Oswald, Nunito */
+
+* { box-sizing: border-box; }
 
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    overflow-x: hidden;
 }
-
 
 body {
-    display : grid;
-
+    display: grid;
     grid-template-rows: auto 1fr auto;
-    margin : 0;
+    margin: 0;
+    overflow-x: hidden;
 
-    background-image: linear-gradient(to bottom right, #151515, #000000);
-    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%,   #111111 0%, #000000 90% );
-    background-attachment: fixed;
+    background: #1c0003;
+    background: linear-gradient(100deg, rgba(28, 0, 3, 1) 0%, rgb(74, 0, 0) 37%, rgb(53, 0, 0) 81%);
 }
 
+/* ---------- NAV ---------- */
 nav {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 2vw;
-
     width: 100%;
     position: sticky;
     top: 0;
-
-    padding : 1vw;
-    padding-left : 2.5vw;
-
-    background-color: rgba(14, 14, 14, 0);
+    z-index: 100;
+    padding: 1rem 2.5vw;
+    background-color: rgba(0, 0, 0, 0.404);
+    backdrop-filter: blur(30px);
     font-size: 1.1rem;
-    backdrop-filter: blur(40px);
 }
 .button {
     font-family: 'Nunito';
     text-decoration: none;
-    color:white;
+    color: rgb(255, 248, 168);
     transition: color 0.4s ease;
 }
-.button:hover {
-    color: #00ffa2;
-}
+.button:hover { color: #ffdd31; }
+
 .right_button {
     font-family: 'Nunito';
     text-decoration: none;
-    color: #00ffa2;
+    color: rgb(255, 248, 168);
     margin-left: auto;
-    margin-right: 4.5vw;
+    margin-right: 2vw;
     transition: color 0.4s ease;
 }
-.right_button:hover {
-    color: rgb(255, 255, 255);
+.right_button:hover { color: #ffdd31; }
+
+/* ---------- MAIN / PROJECTS ---------- */
+#main {
+    background: #1c0003;
+    background: linear-gradient(120deg, rgb(45, 0, 4) 0%, rgb(29, 0, 0) 37%, rgb(45, 0, 0) 81%);
+    background-attachment: fixed;
 }
 
-
-main {          
-    color:white;    
-    padding: 5rem;          
+main {
+    color: rgb(255, 250, 191);
+    padding: 5rem;
     padding-top: 4rem;
 }
-main h1{
+main h1 {
     font-family: 'Oswald';
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
 }
-main p{
+main p {
     font-family: 'Nunito';
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
 }
+
 .projCntnr {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 2rem;
 }
+
 .contnr {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: center;
 }
-.chaosball {
-    border : white 0.5rem solid;
-    border-image: linear-gradient(to bottom right, #2d0061 10%, #00aeff 100%) 1;
-    padding: 2rem;
+
+.info {
+    flex: 1 1 50%;
+    min-width: 0;
 }
-.paperdreams {
-    border : white 0.5rem solid;
-    border-image: linear-gradient(to bottom right, #fcbdff 0%, #c01a41 100%) 1;
-    padding: 2rem;
+
+.image {
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
 }
-.aiassistant {
-    border : white 0.5rem solid;
-    border-image: linear-gradient(to bottom right, #272727 0%, #131313 100%) 1;
-    padding: 2rem;
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
 }
-Main a {
+
+
+main a {
     text-decoration: none;
 }
-Main a h3 {
+main a h3 {
     font-family: 'Nunito';
-    color:white;
+    color: rgb(255, 250, 191);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     transition: color 0.4s ease;
 }
-Main a h3:hover {
-    color: #00ffa2;
-}
-@media all and (max-width : 1300px) {
-    .contnr {
-        display:flex;
-        flex-direction: column;
-    }
+main a h3:hover {
+    color: #ffdd31;
 }
 
-
+/* ---------- FOOTER ---------- */
 footer {
-    border-top :  rgba(255, 255, 255, 0.502) 1px solid;
-
+    border-top: rgba(0, 0, 0, 0.2) 0.5px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-
-    background-color: #1717177e;
+    background-color: rgba(0, 0, 0, 0.55);
     font-size: 1.3rem;
-    padding:1rem 2.5rem  2.5rem  2.5rem;
-
+    padding: 1rem 2.5rem 2.5rem;
+    text-align: center;
 }
-
 .footHead {
     font-family: 'Nunito';
-    color : white;
+    color: rgb(255, 250, 191);
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
 }
-
-.contacts a{
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0;
+}
+.contacts a {
     font-family: 'Nunito';
     text-decoration: none;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.4rem 1.5rem;
+    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
 }
-.lidin {
-    color:rgb(67, 94, 229);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+
+.fbn { color: rgb(255, 243, 109); transition: color 0.3s ease, text-shadow 0.3s ease; }
+
+.lidin:hover { color: rgb(138, 206, 252); text-shadow: 0 0 0.5rem rgba(138, 206, 252, 0.5); }
+.githb:hover { color: rgb(213, 161, 255); text-shadow: 0 0 1rem rgba(213, 161, 255, 0.5); }
+.copen:hover { color: rgb(173, 255, 162); text-shadow: 0 0 1rem rgba(173, 255, 162, 0.5); }
+.lcode:hover { color: rgb(184, 184, 184); text-shadow: 0 0 1rem rgba(184, 184, 184, 0.5); }
+.ytube:hover { color: rgb(255, 165, 138); text-shadow: 0 0 1rem rgba(255, 165, 138, 0.5); }
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Tablet: <= 1024px */
+@media (max-width: 1024px) {
+    nav { font-size: 1rem; gap: 1.5vw; }
+    main { padding: 3rem 2.5rem; }
+    .contnr { gap: 1.5rem; }
 }
-.lidin:hover {
-    color:rgb(72, 175, 243);
-    text-shadow: 0 0 0.5rem rgba(166, 128, 255, 0.486); 
+
+/* Mobile: <= 768px */
+@media (max-width: 768px) {
+    .contnr {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .info, .image {
+        flex: 1 1 auto;
+    }
+    .image { order: -1; }
+    .image img {
+        width: 100%;
+        height: auto;
+    }
 }
-.githb {
-    color:rgb(130, 44, 227);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+
+/* Small mobile: <= 640px */
+@media (max-width: 640px) {
+    nav {
+        gap: 0.75rem 1rem;
+        padding: 0.75rem 1rem;
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+    .right_button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    main { padding: 2.5rem 1.25rem; }
+
+    .chaosball, .paperdreams, .aiassistant {
+        padding: 1.25rem;
+    }
+
+    .contacts a { padding: 0.4rem 0.9rem; }
 }
-.githb:hover {
-    color:rgb(172, 101, 230);
-    text-shadow: 0 0 1rem rgba(218, 109, 255, 0.5);
-}
-.copen {
-    color:rgb(22, 142, 24);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.copen:hover {
-    color:rgb(84, 209, 68);
-    text-shadow: 0 0 1rem rgba(113, 255, 118, 0.532);
-}
-.ytube {
-    color:rgb(183, 23, 23);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.ytube:hover {
-    color:rgb(255, 60, 0);
-    text-shadow: 0 0 1rem rgba(255, 116, 116, 0.546);
+
+/* Very small: <= 380px */
+@media (max-width: 380px) {
+    nav { font-size: 0.85rem; gap: 0.5rem 0.75rem; }
+    main h1 { font-size: 1.6rem; }
+    main p { font-size: 0.95rem; }
 }
