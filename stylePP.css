@@ -107,13 +107,13 @@ main p {
 main a {
     text-decoration: none;
 }
-main a h3 {
+main a {
     font-family: 'Nunito';
-    color: rgb(255, 250, 191);
+    color: rgb(255, 245, 132);
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     transition: color 0.4s ease;
 }
-main a h3:hover {
+main a:hover {
     color: #ffdd31;
 }
 
